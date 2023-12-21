@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let tinggiAir =  parseFloat(prompt("Masukkan Ketinggian Air:"));
+let PintuAir;
+
+if (tinggiAir <= 500.0) {
+    PintuAir = "AMAN";
+} else if (tinggiAir <= 600.0) {
+    PintuAir = "WASPADA";
+} else if (tinggiAir <= 650.0) {
+    PintuAir = "SIAGA 2";
+} else {
+    PintuAir = "SIAGA 1";
+}
+
+console.log("Status pintu air: " + PintuAir);
+console.log ( "ketinggian saat ini:"+ tinggiAir )
+    </script>
+</body>
+</html>

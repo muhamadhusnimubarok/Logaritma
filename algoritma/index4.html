@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let hargaBarang1 = parseFloat(prompt("Masukkan harga barang 1:"));
+        let hargaBarang2 = parseFloat(prompt("Masukkan harga barang 2:"));
+        let hargaBarang3 = parseFloat(prompt("Masukkan harga barang 3:"));
+        
+        
+        let totalHarga = hargaBarang1 + hargaBarang2 + hargaBarang3;
+        
+        
+        if (totalHarga > 100000) {
+            let potongan = 0.1 * totalHarga;
+            totalHarga -= potongan;
+            console.log(" Selamat Kamu mendapatkan potongan 10%!");
+        } else {
+            console.log("Total harga belum memenuhi syarat untuk potongan.");
+        }
+        
+        
+        console.log("Total harga yang harus dibayar: " + totalHarga);
+
+    </script>
+    
+</body>
+</html>
