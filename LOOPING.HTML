@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <STYLE> 
+      H1 {
+         display: flex;
+        justify-content: center;
+        margin-top: 300px;
+        font-weight:bold;
+      }
+
+    </STYLE>
+</head>
+<body>
+    <script>
+//////////////////////////////////////////////////////FOR//////////////////////////////////////////////////////////////////////
+             for (let x = 10; x <=20; x++){
+                console.log ( 'dari', x)
+             }
+  ///////////////////////////////////////////////////LET//////////////////////////////////////////////////////////////////////
+
+ let z = 1
+ 
+  while(z<=5) {
+    console.log ('HASIL z', z)
+    z++
+  }
+  ////////////////////////////////////////////////DO -WHILE//////////////////////////////////////////////////////////////////
+
+
+  let y = 10
+  do {
+    console.log('data y ke', y)
+    y++
+  } while (y <= 10);
+
+//////////////////////////////////////////////////////
+for ( let z=0; z<=50; z++) {
+  if ( z%2==0){
+    console.log ("genap", z)
+  } else {
+    console.log("ganjil", z)}
+}
+
+///////////////////////////////////////////////////////
+
+let p = 0
+
+while( p <=50  ) {
+  if ( p%2==0){
+    console.log ("GENAP", p)
+  } else {
+    console.log("GANJIL", p)}
+    p++
+}
+
+////////////////////////////////////////////////////////
+
+let a = 1;
+
+do {
+  if (a % 2 == 0) {
+  console.log("GENAP", a);
+  } else {
+   console.log("GANJIL", a);
+  }
+  a++;
+} while (a <= 10);//
+
+//////////////////////////////////////////////////////////////////////////////////
+
+function faktor(n) {
+  let faktorial = 1;
+
+  for (let i = 1; i <= n; i++) {
+    faktorial *= i;
+  }
+
+  return faktorial;
+}
+
+// Contoh pemanggilan fungsi untuk menentukan faktorial dari bilangan 5
+let bilangan = prompt  ('MASUKKAN ANGKA');
+let hasilFaktorial = faktor(bilangan);
+
+console.log(`Faktor dari ${bilangan} adalah: ${hasilFaktorial}`);
+
+
+</script>
+<H1> AKU ADALAH AKU</H1>
+</body>
+</html>

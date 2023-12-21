@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let nilai = prompt("Masukkan Hasil Nilai Anda");
+
+       
+
+        if (nilai >= 90 && nilai <= 100) {
+            console.log ('Nilai Sempurna dan LOLOS');
+        } else if (nilai >= 80 && nilai <= 89) {
+            jalur = prompt('Jalur Rapot atau jalur Prestasi')
+       
+            if (jalur == 'jalur rapot') {
+               console.log('Anda memilih jalur rapot');
+            } else if (jalur == 'jalur prestasi') {
+                console.log('Anda memilih jalur prestasi');
+            }
+        } else  {
+            console.log ('Silahkan Test Mandiri');
+            nilaites = prompt('masukkan hasil test Mandiri');
+        if ( nilaites >=79 && nilaites <=100) {
+            console.log('ANDA LOLOS TEST')
+        }else {
+            console.log('ANDA GAGAL SILAHKAN MENCOBA LAGI LAIN KALI');
+             }
+         };
+
+      
+    </script>
+</body>
+</html>
