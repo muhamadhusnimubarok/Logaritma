@@ -1,0 +1,102 @@
+    //no 1 Nilai
+
+        // let MATH = 78;
+        // let PABP = 92;
+        // let DPK = 82;
+        // let mean = (MATH + PABP + DPK)/3;
+
+        // if(mean >= 80 && mean <= 100) {
+        //     grade= "A";
+        // }
+        // else if (mean >= 75 && mean <80) {
+        //     grade = "B";
+        // }
+        // else if (mean >= 65 && mean <75) {
+        //     grade = "C";
+        // }
+        // else if (mean >= 45 && mean <65) {
+        //     grade = "D";
+        // }
+        // else if (mean >= 0 && mean <45) {
+        //     grade = "E";
+        // } else {
+        //     grade = "K";
+        // }
+
+        // console.log("rata-rata iqbal adalah:"+ mean);
+        // console.log("Jadi nilai iqbal adalah:"+ grade);
+
+///////////////////////////////////////////////////////////////////////////////
+
+//   let nomor = prompt("isi nomor mu (contoh 22505197803)")
+//         let nomor_string = nomor.toString();
+//         let satu = parseInt(nomor_string[nomor_string.length - 1]);
+//         let dua = parseInt(nomor_string[nomor_string.length - 2]);
+//         let tiga = parseInt(nomor_string[nomor_string.length - 3]);
+//         let empat = parseInt(nomor_string[nomor_string.length - 4]);
+//         let lima = parseInt(nomor_string[nomor_string.length - 5]);
+//         let enam = parseInt(nomor_string[nomor_string.length - 6]);
+//         let tujuh = parseInt(nomor_string[nomor_string.length - 7]);
+//         let delapan = parseInt(nomor_string[nomor_string.length - 8]);
+//         let sembilan = parseInt(nomor_string[nomor_string.length - 9]);
+//         let sepuluh = parseInt(nomor_string[nomor_string.length - 10]);
+//         let sebelas = parseInt(nomor_string[nomor_string.length - 11]);
+
+//           if (delapan == 0 && tujuh == 1) {
+//             console.log("bergolongan", sebelas, " lahir pada tanggal", sepuluh, sembilan, " bulan Januari", " tahun ", enam, lima, empat, tiga, " dan bernomor urut ", dua, satu)
+//         } else if (delapan == 0 && tujuh == 2) {
+//             console.log("bergolongan", sebelas, " lahir pada tanggal", sepuluh, sembilan, " bulan Februari", " tahun ", enam, lima, empat, tiga, " dan bernomor urut ", dua, satu)
+//         } else if (delapan == 0 && tujuh == 3) {
+//             console.log("bergolongan", sebelas, " lahir pada tanggal", sepuluh, sembilan, " bulan Maret", " tahun ", enam, lima, empat, tiga, " dan bernomor urut ", dua, satu)
+//         } else if (delapan == 0 && tujuh == 4) {
+//             console.log("bergolongan", sebelas, " lahir pada tanggal", sepuluh, sembilan, " bulan April", " tahun ", enam, lima, empat, tiga, " dan bernomor urut ", dua, satu)
+//         } else if (delapan == 0 && tujuh == 5) {
+//             console.log("bergolongan", sebelas, " lahir pada tanggal", sepuluh, sembilan, " bulan Mei", " tahun ", enam, lima, empat, tiga, " dan bernomor urut ", dua, satu)
+//         } else if (delapan == 0 && tujuh == 6) {
+//             console.log("bergolongan", sebelas, " lahir pada tanggal", sepuluh, sembilan, " bulan Juni", " tahun ", enam, lima, empat, tiga, " dan bernomor urut ", dua, satu)
+//         } else if (delapan == 0 && tujuh == 7) {
+//             console.log("bergolongan", sebelas, " lahir pada tanggal", sepuluh, sembilan, " bulan Juli", " tahun ", enam, lima, empat, tiga, " dan bernomor urut ", dua, satu)
+//         } else if (delapan == 0 && tujuh == 8) {
+//             console.log("bergolongan", sebelas, " lahir pada tanggal", sepuluh, sembilan, " bulan Agustus", " tahun ", enam, lima, empat, tiga, " dan bernomor urut ", dua, satu)
+//         } else if (delapan == 0 && tujuh == 9) {
+//             console.log("bergolongan", sebelas, " lahir pada tanggal", sepuluh, sembilan, " bulan September", " tahun ", enam, lima, empat, tiga, " dan bernomor urut ", dua, satu)
+//     } else if (delapan == 1 && tujuh == 0) {
+//             console.log("bergolongan", sebelas, " lahir pada tanggal", sepuluh, sembilan, " bulan Oktober", " tahun ", enam, lima, empat, tiga, " dan bernomor urut ", dua, satu)
+//         } else if (delapan == 1 && tujuh == 1) {
+//             console.log("bergolongan", sebelas, " lahir pada tanggal", sepuluh, sembilan, " bulan November", " tahun ", enam, lima, empat, tiga, " dan bernomor urut ", dua, satu)
+//         } else if (delapan == 1 && tujuh == 2) {
+//             console.log("bergolongan", sebelas, " lahir pada tanggal", sepuluh, sembilan, " bulan Desember", " tahun ", enam, lima, empat, tiga, " dan bernomor urut ", dua, satu)
+//         }
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function tambahSatuDetik(waktu) {
+    let [jam, menit, detik] = waktu.split(':').map(Number);
+
+    if (detik < 59) {
+        detik += 1;
+    } else {
+        detik = 0;
+        if (menit < 59) {
+            menit += 1;
+        } else {
+            menit = 0;
+            if (jam < 23) {
+                jam += 1;
+            } else {
+                jam = 0;
+            }
+        }
+    }
+
+    return `${jam.toString().padStart(2, '0')}:${menit.toString().padStart(2, '0')}:${detik.toString().padStart(2, '0')}`;
+}
+
+let waktu1 = '02:13:23';
+let waktu2 = '02:13:59';
+let waktu3 = '02:59:59';
+let waktu4 = '23:59:59';
+
+console.log(`Setelah penambahan 1 detik: ${tambahSatuDetik(waktu1)}`);
+console.log(`Setelah penambahan 1 detik: ${tambahSatuDetik(waktu2)}`);
+console.log(`Setelah penambahan 1 detik: ${tambahSatuDetik(waktu3)}`);
+console.log(`Setelah penambahan 1 detik: ${tambahSatuDetik(waktu4)}`);
